@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./CSS/loginstyle.css">
+    <link rel="stylesheet" href="./CSS/header.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up/Sign In</title>
 </head>
@@ -14,6 +15,11 @@
     <?php
         require 'PHP/connect.php';
     ?>
+    <header>
+    	<?php
+    		include 'PHP/header.php';
+    	?>
+    </header>
     <div class="background">
         <div class="login-area hide">
             <div class="container">

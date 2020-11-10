@@ -6,18 +6,17 @@
                 <div class="content">
                     <p> The website where you will get all the products you wish from electronic gadgets, cameras to trending fashion dresses ,sarees, shirts and many more</p>
                 </div>
-                <h2>Address</h2>
                 <div class="content">
-                    <div class="place">
-                      <span class="fa fa-map-marker-alt"></span>
+                    <div class="place flex">
+                      <span class="location-icon contact-icons"></span>
                       <span class="text">Devdarshan bldg,Sec-34,Shop No-3,Mansarovar</span>
                     </div>
-                    <div class="phone">
-                      <span class="fa fa-phone-alt"></span>
+                    <div class="phone flex">
+                      <span class="phone-icon contact-icons"></span>
                       <span class="text">+91 7710811130</span>
                     </div>
-                    <div class="email">
-                      <span class="fa fa-envelop"></span>
+                    <div class="email flex">
+                      <span class="email-icon contact-icons"></span>
                       <span class="text">support@shop.com</span>
                     </div>
                 </div>
