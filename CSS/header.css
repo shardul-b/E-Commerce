@@ -1,4 +1,19 @@
 /*Nav bar*/
+ul{
+  list-style-type:none; 
+}
+img{
+  max-width:100%;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.flex-space{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 header{
   z-index: 300;
   background-color: #210B61;

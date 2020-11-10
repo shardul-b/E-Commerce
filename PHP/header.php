@@ -1,4 +1,5 @@
 <?php
+    //session_start();
 	echo'<div class="container flex-space">
             <div class="logo-container">
                 <img src="./Assets/Images/logo.png" alt="Logo" class="logo">
@@ -9,7 +10,7 @@
             </div>
             <nav class="flex-space">
                 <ul class="nav-list nav-list-primary flex-space">
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./index.php" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
@@ -19,7 +20,7 @@
                     <span class="cart">My Cart</span>
                 </div>
                 <ul class="nav-list nav-list-secondary flex-space">
-                    <li class="nav-item"><a href="#" class="nav-link-button">Sign In</a></li>
+                    '.((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true)?'<li class="nav-item"><a href="./myacc.php" class="nav-link-button">MY ACCOUNT</a></li>':'<li class="nav-item"><a href="./login.php" class="nav-link-button">Sign In</a></li>').'
                     <!-- <li class="nav-item"><a href="#" class="nav-link-button">Sign up</a></li> -->
                 </ul>
             </nav>

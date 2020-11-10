@@ -1,14 +1,14 @@
 .face-icon{
-    background:url('./Assets/Icons/facebook-icon.svg');
+    background:url('../Assets/Icons/facebook-icon.svg');
 }
 .insta-icon{
-    background:url('./Assets/Icons/instagram.svg'); 
+    background:url('../Assets/Icons/instagram.svg'); 
 }
 .twitter-icon{
-    background:url('./Assets/Icons/twitter.svg');   
+    background:url('../Assets/Icons/twitter.svg');   
 }
 .linkedin-icon{
-    background:url('./Assets/Icons/linkedin.svg'); 
+    background:url('../Assets/Icons/linkedin.svg'); 
 }
 .social-icon{
     background-size:2em;
@@ -25,13 +25,13 @@
   margin:0 auto;
 }
 .location-icon{
-  background:url('./Assets/Icons/location.svg');
+  background:url('../Assets/Icons/location.svg');
 }
 .phone-icon{
-  background:url('./Assets/Icons/phone.svg');
+  background:url('../Assets/Icons/phone.svg');
 }
 .email-icon{
-  background:url('./Assets/Icons/email.svg');
+  background:url('../Assets/Icons/email.svg');
 }
 .contact-icons{
   /*border:1px solid red;*/

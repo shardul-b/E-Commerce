@@ -123,7 +123,7 @@
         if(isset($_POST['submit'])){
             $loginEmail=$_POST["login-email"];
             $loginPass=$_POST["login-password"];
-            $loginSQL="SELECT 'id' FROM USER WHERE 'Email'='$loginEmail'AND 'password'='$loginPass'";
+            $loginSQL="SELECT 'id' FROM User WHERE 'Email'='$loginEmail'AND 'password'='$loginPass'";
             $loginresult=mysqli_query($connection,$loginSQL) or die('Invalid query:');
             $row = mysqli_fetch_array($loginresult,MYSQLI_ASSOC);
             $count = mysqli_num_rows($loginresult);
