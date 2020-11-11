@@ -37,9 +37,13 @@
                 $sql = "SELECT * FROM product WHERE Pro_category = 'phone'";
                 $rate='';
                 $non='';
+                $sale='';
                             if($result = mysqli_query($connection, $sql)){
                                 //$row = mysqli_fetch_all($result, MYSQLI_NUM);
                                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                                    $rate='';
+                                    $non='';
+                                    $sale='';
                                     for($i=0;$i<5;$i++){
                                         if($i<$row["Pro_ratings"]){
                                             $rate.='<span class="star-rate"></span>';
@@ -47,10 +51,15 @@
                                             $non.='<span class="star"></span>';
                                         }
                                     }
+                                    if($row["Pro_offer"]>0){
+                                        $sale.='<span class="tag">'.$row["Pro_offer"].'% OFF</span> ';
+                                    }else{
+                                        $sale.='';
+                                    }
                                     echo '
                                         <div class="card">
                                             <div class="product-image-container">
-                                                <!-- <span class="tag">'.$row["Pro_offer"].'OFF</span> -->
+                                                '.$sale.'
                                                 <img src="'.$row["Pro_image"].'" alt="'.$row["Pro_name"].'" class="product-img">
                                             </div>
                                             <div class="details">
@@ -68,7 +77,7 @@
                                                     <!-- ADD TO CART </a> -->
 
                                                     <!-- <form method="post"> -->
-                                                        <button class="cart-button" name="cart">ADD TO CART</button>
+                                                        <a href="./index.php?id='.$row["Pro_id"].'"><button class="cart-button" name="cart">ADD TO CART</button></a>
                                                         <!-- <input type="hidden" class="hidden-cart"> -->
                                                     <!-- </form> -->
                                                 </div>

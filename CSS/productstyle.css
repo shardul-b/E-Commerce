@@ -1,0 +1,71 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+	outline:  none;
+	background:white;
+	font-weight: 300;
+}
+.container {
+	width:95%;
+	margin: 0 auto;
+}
+
+.row{
+	display: flex;
+}
+
+img{
+	max-width: 100%
+}
+
+.long-desc{
+	text-align: justify;
+}
+/*PC section*/
+@media (min-width:720px){
+.single-product{
+	margin-top: 50px;
+}
+.single-product .col-2 img{
+	padding: 0;
+}
+.single-product .col-2{
+	padding: 1.5em;
+}
+.image-container{
+	/*border:1px solid red;*/
+	max-width: 25em;
+	/*height:30em;*/
+}
+/*margin:20px 0;*/
+	font-size: 1.3rem;
+	/*font-weight:bold;*/
+}
+
+.single-product input{
+	width: 5em;
+	height:2em;
+	padding-left: 0.5em;
+	font-size: 1.2rem;
+	margin-right: 1em;
+	/*border: 1px solid #fff;*/
+}
+.button{
+	background-color:#000000;
+	border: none;
+	color: white;
+	padding: 0.5em 4em;
+	text-align: center;
+	text-decoration: none;
+	/*display: inline-block;*/
+	font-size: 1.2rem;
+	border-radius: 12px;
+ 	/*margin: 4px 5px;*/
+}
+.single-product .fa{
+	color: #ff523b;
+	margin-left: 10px;
+}
+}
