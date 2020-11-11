@@ -20,7 +20,7 @@
                     <span class="cart">My Cart</span>
                 </div>
                 <ul class="nav-list nav-list-secondary flex-space">
-                    '.((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true)?'<li class="nav-item"><a href="./myacc.php" class="nav-link-button">MY ACCOUNT</a></li>':'<li class="nav-item"><a href="./login.php" class="nav-link-button">Sign In</a></li>').'
+                    '.((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true)?'<li class="nav-item"><a href="./AccountInfo.php" class="nav-link-button account">MY ACCOUNT</a></li>':'<li class="nav-item"><a href="./login.php" class="nav-link-button">Sign In</a></li>').'
                     <!-- <li class="nav-item"><a href="#" class="nav-link-button">Sign up</a></li> -->
                 </ul>
             </nav>

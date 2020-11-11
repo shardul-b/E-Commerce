@@ -123,17 +123,23 @@
         if(isset($_POST['submit'])){
             $loginEmail=$_POST["login-email"];
             $loginPass=$_POST["login-password"];
-            $loginSQL="SELECT 'id' FROM User WHERE 'Email'='$loginEmail'AND 'password'='$loginPass'";
-            $loginresult=mysqli_query($connection,$loginSQL) or die('Invalid query:');
-            $row = mysqli_fetch_array($loginresult,MYSQLI_ASSOC);
-            $count = mysqli_num_rows($loginresult);
-            if($count==1){
+            $loginSQL="SELECT id FROM User WHERE Email='$loginEmail'AND password='$loginPass'";
+            $loginresult=mysqli_query($connection,$loginSQL) or die('Invalid query:'.mysqli_error($connection));
+            $row = mysqli_fetch_array($loginresult);
+
+            //$count = mysqli_num_rows($loginresult);
+            // echo($count);
+            if(isset($row)){
                 $_SESSION['loggedin']=true;
-                $_SESSION['userid']=count['id'];
-                header('Location:./index.php');
+                $_SESSION['userid']=$row['id'];
+                // header('Location:./index.php');
+                echo "<script> location.href='./index.php'; </script>";
+                exit;
             }else{
+                // header('Location:./AccountInfo.php');
                 $_SESSION['loggedin']=false;
-                // $_SESSION['userid']=count['id'];
+                // echo($row['id']);
+                // echo('YO');
                 $error='Invalid Email or Password';
             }
         }

@@ -1,5 +1,6 @@
 <?php 
     session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +15,7 @@
 <body>
     <header>
         <?php
+            require './PHP/connect.php';
             include './PHP/header.php';
         ?>
     </header>
@@ -22,9 +24,9 @@
             <h2> Profile Details</h2>
             <form action="" method="post">
                 <?php
-                // if(!isset($_SESSION['userid']) && !$_SESSION['loggedin']==true){
-                //     header('Location:./login.php');
-                // }
+                if(!isset($_SESSION['userid']) && !$_SESSION['loggedin']==true){
+                    header('Location:./login.php');
+                }
                     $sql = "SELECT * FROM User WHERE  id= ".$_SESSION['userid']."";
                             if($result = mysqli_query($connection, $sql)){
                                 //$row = mysqli_fetch_all($result, MYSQLI_NUM);
@@ -76,6 +78,7 @@
                                         </div>
                                         <div class="row">
                                                 <input type="button" name="edit" value="Edit">
+                                                <button class="logout" name="logout">LOGOUT</button>
                                         </div>
                                     ';
                                 }
@@ -104,14 +107,21 @@
         </div>
     </div>
     <?php
-        if(isset($_POST['name'])){
+        if(isset($_POST['edit'])){
             $FirstName=$_POST["firstname"];
             $LastName=$_POST["lastname"];
             $email=$_POST["email"];
             $phone=$_POST["phone"];
             $Address=$_POST["address"];
-            $sql='Update User SET "Firstname"='.$FirstName.',"Lastname"='.$LastName.',"Email="'.$email.',"Phone"='.$phone.',"Address="'.$Address.'WHERE id='.$_SESSION["userid"].'';
+            $sql="Update User SET Firstname='$FirstName',Lastname='$LastName',Email='$email',Phone='$phone',Address='$Address' WHERE id='$_SESSION["userid"]'";
             $result = mysqli_query($connection,$sql) or die('Invalid query:');
+        }
+        if(isset($_POST['logout'])){
+            unset($_SESSION['userid']);
+            $_SESSION['loggedin']=false;
+            session_destroy();
+            echo "<script> location.href='./index.php'; </script>";
+            exit;
         }
     ?>
     <footer>
