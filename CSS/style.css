@@ -46,28 +46,29 @@ span{
     width:5%;
     /*background-color: yellow;*/
     justify-content: center;
-    top:32%;
+    top:42%;
 }
 .left-arrow-box{
     left:0.3em;
 }
 .right-arrow-box{
     right:0.3em;
-    /*top:32%;*/
+    top:42%;
     /*justify-self:flex-end; */
 }
 .left-arrow{
     background:url('../Assets/Icons/left.svg');
 }
 .advert{
-    border:1px solid green;
+    margin-top: 0.1em;
+    /*border:1px solid green;*/
     width:100%;
-    height:60vh;
+    height:70vh;
 }
 .advert-img{
     flex-shrink: 0;
     width:100%;
-    height:60vh;
+    height:70vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

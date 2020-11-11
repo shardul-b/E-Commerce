@@ -13,6 +13,7 @@
     <header>
       <?php
         include'./PHP/header.php';
+        require './PHP/connect.php';
       ?>
     </header>
 
@@ -32,157 +33,155 @@
     <div class="container">
         <h2 class="head">Featured Gadget Deals</h2>
         <div class="featured flex">
-            <div class="card">
-                <div class="product-image-container">
-                    <!-- <span class="tag">10% OFF</span> -->
-                    <img src="./Assets/Images/cam5.jpeg" alt="" class="product-img">
-                </div>
-                <div class="details">
-                    <div class="container">
-                        <!-- For product details -->
-                        <a href="ProductDes.php?id=9"><span class="name">Canon Digital Camera</span></a>
-                        <div class="rating-container flex">
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                        <span class="cost">&#8377;60,000</span>
-                        <!-- ADD TO CART </a> -->
+            <?php
+                $sql = "SELECT * FROM product WHERE Pro_category = 'phone'";
+                $rate='';
+                $non='';
+                            if($result = mysqli_query($connection, $sql)){
+                                //$row = mysqli_fetch_all($result, MYSQLI_NUM);
+                                while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                                    for($i=0;$i<5;$i++){
+                                        if($i<$row["Pro_ratings"]){
+                                            $rate.='<span class="star-rate"></span>';
+                                        }else{
+                                            $non.='<span class="star"></span>';
+                                        }
+                                    }
+                                    echo '
+                                        <div class="card">
+                                            <div class="product-image-container">
+                                                <!-- <span class="tag">'.$row["Pro_offer"].'OFF</span> -->
+                                                <img src="'.$row["Pro_image"].'" alt="'.$row["Pro_name"].'" class="product-img">
+                                            </div>
+                                            <div class="details">
+                                                <div class="container">
+                                                    <!-- For product details -->
+                                                    <a href="ProductDes.php?id='.$row["Pro_id"].'"><span class="name">'.$row["Pro_name"].'</span></a>
+                                                    <div class="rating-container flex">
+                                                        '.
+                                                            $rate.
+                                                            $non
+                                                        .'
+                                                          
+                                                    </div>
+                                                    <span class="cost">&#8377;'.$row["Pro_cost"].'</span>
+                                                    <!-- ADD TO CART </a> -->
 
-                        <!-- <form method='post'> -->
-                        	<button class="cart-button" name='cart'>ADD TO CART</button>
-                        	<!-- <input type="hidden" class="hidden-cart"> -->
-                        <!-- </form> -->
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="product-image-container">
-                    <span class="tag">10% OFF</span>
-                    <img src="./Assets/Images/j3.jpeg" alt="" class="product-img">
-                </div>
-                <div class="details">
-                    <div class="container">
-                        <span class="name">Canon Digital Camera</span>
-                        <div class="rating-container flex">
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                        <span class="cost">&#8377;60,000</span>
-                        <button class="cart-button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="product-image-container">
-                    <span class="tag">10% OFF</span>
-                    <img src="./Assets/Images/j3.jpeg" alt="" class="product-img">
-                </div>
-                <div class="details">
-                    <div class="container">
-                        <span class="name">Canon Digital Camera</span>
-                        <div class="rating-container flex">
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                        <span class="cost">&#8377;60,000</span>
-                        <button class="cart-button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="product-image-container">
-                    <span class="tag">10% OFF</span>
-                    <img src="./Assets/Images/j3.jpeg" alt="" class="product-img">
-                </div>
-                <div class="details">
-                    <div class="container">
-                        <span class="name">Canon Digital Camera</span>
-                        <div class="rating-container flex">
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                        <span class="cost">&#8377;60,000</span>
-                        <button class="cart-button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="product-image-container">
-                    <span class="tag">10% OFF</span>
-                    <img src="./Assets/Images/j3.jpeg" alt="" class="product-img">
-                </div>
-                <div class="details">
-                    <div class="container">
-                        <span class="name">Canon Digital Camera</span>
-                        <div class="rating-container flex">
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                        <span class="cost">&#8377;60,000</span>
-                        <button class="cart-button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
+                                                    <!-- <form method="post"> -->
+                                                        <button class="cart-button" name="cart">ADD TO CART</button>
+                                                        <!-- <input type="hidden" class="hidden-cart"> -->
+                                                    <!-- </form> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ';
+                                }
+        
+                            }
+            ?>
+            
         </div>
-        <h2>Some Products</h2>
+        <h2 class="head">Featured Camera Deals</h2>
         <div class="featured flex">
-            <div class="card">
-                <div class="product-image-container">
-                    <span class="tag">10% OFF</span>
-                    <img src="./Assets/Images/j3.jpeg" alt="" class="product-img">
-                </div>
-                <div class="details">
-                    <div class="container">
-                        <span class="name">Canon Digital Camera</span>
-                        <div class="rating-container flex">
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                        <span class="cost">&#8377;60,000</span>
-                        <button class="cart-button">ADD TO CART</button>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="product-image-container">
-                    <span class="tag">10% OFF</span>
-                    <img src="./Assets/Images/j3.jpeg" alt="" class="product-img">
-                </div>
-                <div class="details">
-                    <div class="container">
-                        <span class="name">Canon Digital Camera</span>
-                        <div class="rating-container flex">
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star-rate"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </div>
-                        <span class="cost">&#8377;60,000</span>
-                        <button class="cart-button">ADD TO CART</button>
+            <?php
+                $sql = "SELECT * FROM product WHERE Pro_category = 'camera'";
+                $rate='';
+                $non='';
+                            if($result = mysqli_query($connection, $sql)){
+                                //$row = mysqli_fetch_all($result, MYSQLI_NUM);
+                                while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                                    $rate='';
+                                    $non='';
+                                    for($i=0;$i<5;$i++){
+                                        if($i<$row["Pro_ratings"]){
+                                            $rate.='<span class="star-rate"></span>';
+                                        }else{
+                                            $non.='<span class="star"></span>';
+                                        }
+                                    }
+                                    echo '
+                                        <div class="card">
+                                            <div class="product-image-container">
+                                                <!-- <span class="tag">'.$row["Pro_offer"].'OFF</span> -->
+                                                <img src="'.$row["Pro_image"].'" alt="'.$row["Pro_name"].'" class="product-img">
+                                            </div>
+                                            <div class="details">
+                                                <div class="container">
+                                                    <!-- For product details -->
+                                                    <a href="ProductDes.php?id='.$row["Pro_id"].'"><span class="name">'.$row["Pro_name"].'</span></a>
+                                                    <div class="rating-container flex">
+                                                        '.
+                                                            $rate.
+                                                            $non
+                                                        .'
+                                                          
+                                                    </div>
+                                                    <span class="cost">&#8377;'.$row["Pro_cost"].'</span>
+                                                    <!-- ADD TO CART </a> -->
 
-                    </div>
-                </div>
-            </div>
+                                                    <!-- <form method="post"> -->
+                                                        <button class="cart-button" name="cart">ADD TO CART</button>
+                                                        <!-- <input type="hidden" class="hidden-cart"> -->
+                                                    <!-- </form> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ';
+                                }
+        
+                            }
+            ?>
+        </div>
+        <h2 class="head">Featured Women's Fashion Deals</h2>
+        <div class="featured flex">
+            <?php
+                $sql = "SELECT * FROM product WHERE Pro_category = 'clothingwomen'";
+                $rate='';
+                $non='';
+                            if($result = mysqli_query($connection, $sql)){
+                                //$row = mysqli_fetch_all($result, MYSQLI_NUM);
+                                while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                                    $rate='';
+                                    $non='';
+                                    for($i=0;$i<5;$i++){
+                                        if($i<$row["Pro_ratings"]){
+                                            $rate.='<span class="star-rate"></span>';
+                                        }else{
+                                            $non.='<span class="star"></span>';
+                                        }
+                                    }
+                                    echo '
+                                        <div class="card">
+                                            <div class="product-image-container">
+                                                <!-- <span class="tag">'.$row["Pro_offer"].'OFF</span> -->
+                                                <img src="'.$row["Pro_image"].'" alt="'.$row["Pro_name"].'" class="product-img">
+                                            </div>
+                                            <div class="details">
+                                                <div class="container">
+                                                    <!-- For product details -->
+                                                    <a href="ProductDes.php?id='.$row["Pro_id"].'"><span class="name">'.$row["Pro_name"].'</span></a>
+                                                    <div class="rating-container flex">
+                                                        '.
+                                                            $rate.
+                                                            $non
+                                                        .'
+                                                          
+                                                    </div>
+                                                    <span class="cost">&#8377;'.$row["Pro_cost"].'</span>
+                                                    <!-- ADD TO CART </a> -->
+
+                                                    <!-- <form method="post"> -->
+                                                        <button class="cart-button" name="cart">ADD TO CART</button>
+                                                        <!-- <input type="hidden" class="hidden-cart"> -->
+                                                    <!-- </form> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ';
+                                }
+        
+                            }
+            ?>
         </div>
     </div>
 </div>

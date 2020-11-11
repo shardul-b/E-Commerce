@@ -12,9 +12,9 @@ function advertCreator(){
 	//Image links in this array 
 	const banners=
 	[
-		'https://images.unsplash.com/photo-1494783367193-149034c05e8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
-		'https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
-		'https://images.unsplash.com/photo-1527416876370-fb74d128c3dc?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9'
+		'./Assets/Images/Ad1.jpg',
+		'./Assets/Images/ad2.jpg',
+		'./Assets/Images/ad3.jpg'
 	];
 	//Create Divs dynamically inside the advert div
 	for(let i of banners){
