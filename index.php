@@ -75,10 +75,7 @@
                                                     </div>
                                                     <span class="cost">&#8377;'.$row["Pro_cost"].'</span>
                                                     <!-- ADD TO CART </a> -->
-
-                                                    <!-- <form method="post"> -->
                                                         <a href="./index.php?id='.$row["Pro_id"].'"><button class="cart-button" name="cart">ADD TO CART</button></a>
-                                                        <!-- <input type="hidden" class="hidden-cart"> -->
                                                     <!-- </form> -->
                                                 </div>
                                             </div>
@@ -129,7 +126,7 @@
                                                     <!-- ADD TO CART </a> -->
 
                                                     <!-- <form method="post"> -->
-                                                        <button class="cart-button" name="cart">ADD TO CART</button>
+                                                        <a href="./index.php?id='.$row["Pro_id"].'"><button class="cart-button" name="cart">ADD TO CART</button></a>
                                                         <!-- <input type="hidden" class="hidden-cart"> -->
                                                     <!-- </form> -->
                                                 </div>
@@ -180,7 +177,7 @@
                                                     <!-- ADD TO CART </a> -->
 
                                                     <!-- <form method="post"> -->
-                                                        <button class="cart-button" name="cart">ADD TO CART</button>
+                                                        <a href="./index.php?id='.$row["Pro_id"].'"><button class="cart-button" name="cart">ADD TO CART</button></a>
                                                         <!-- <input type="hidden" class="hidden-cart"> -->
                                                     <!-- </form> -->
                                                 </div>
@@ -200,6 +197,16 @@
             include './PHP/footer.php';
         ?>
     </footer>
+    <?php
+        if(isset($_GET['id'])){
+            if(!isset($_SESSION['userid']) && !$_SESSION['loggedin']==true){
+                echo "<script> location.href='./login.php'; </script>";
+            }else{
+                $SQL = "INSERT INTO Cart (user_id,product_id,quantity) VALUES ('". $_SESSION['userid'] ."','". $_GET['id'] ."','". 1 ."')";  
+                $result = mysqli_query($connection,$SQL) or die('Invalid query:'.mysqli_error($connection));
+            }
+        }
+    ?>
     <script src="./JS/script.js"></script>
 </body>
 </html>

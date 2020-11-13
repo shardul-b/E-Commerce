@@ -77,7 +77,9 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                                <input type="button" name="edit" value="Edit">
+                                            <form mehod="post">
+                                                <button name="edit">Edit</button>
+                                                </form>
                                                 <button class="logout" name="logout">LOGOUT</button>
                                         </div>
                                     ';
@@ -113,8 +115,8 @@
             $email=$_POST["email"];
             $phone=$_POST["phone"];
             $Address=$_POST["address"];
-            $sql="Update User SET Firstname='$FirstName',Lastname='$LastName',Email='$email',Phone='$phone',Address='$Address' WHERE id='$_SESSION["userid"]'";
-            $result = mysqli_query($connection,$sql) or die('Invalid query:');
+            $sql="UPDATE User SET Firstname='$FirstName',Lastname='$LastName',Email='$email',Phone='$phone',Address='$Address' WHERE id = ".$_SESSION['userid']."";
+            $result = mysqli_query($connection,$sql) or die('Invalid query:'.mysqli_error($connection));
         }
         if(isset($_POST['logout'])){
             unset($_SESSION['userid']);

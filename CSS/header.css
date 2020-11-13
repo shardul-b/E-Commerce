@@ -45,7 +45,8 @@ a{
   filter:invert(100%);
 }
 .account{
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  /*border:1px solid red;*/
 }
 .cart-container{
   /*border:1px solid red;*/
@@ -66,7 +67,7 @@ a{
   color:#ECCD04;
   font-weight: 600;
   border-radius: 15px;
-  padding:5px 25px;
+  padding:0.4em 1em;
 }
 .nav-link-button:hover{
   background-color: #ECCD04;
