@@ -20,7 +20,7 @@ a{
 	color:#000;
 }
 .container{
-	width:90%;
+	width:95%;
 	margin:0 auto;
 	/*border: 1px solid yellow;*/
 }
@@ -66,6 +66,9 @@ select{
 	margin-left: 5em;
 	line-height: 1.5em;
 }
+.details a{
+	color:#000;
+}
 .name{
 	font-size: 1.2rem;
 	font-weight: bold
@@ -74,14 +77,14 @@ select{
 	margin:0.5em 0;
 }
 .star-rate,.star{
-  background-image: url('./Assets/Icons/star_rate.svg');
+  background-image: url('../Assets/Icons/star_rate.svg');
   background-repeat: no-repeat;
   background-size: 1em;
   height: 1em;
   width:1em;
 }
 .star{
-  background-image: url('./Assets/Icons/star.svg');
+  background-image: url('../Assets/Icons/star.svg');
 }
 .stock{
 	color:blue;
