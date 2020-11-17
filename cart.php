@@ -66,6 +66,7 @@
 			?>
 			
 		</div>
+		<!-- ORDER left->select from cart, insert to order -->
 		<form method="post">
 			<button class="order-button">CONFIRM ORDER</button>
 		</form>

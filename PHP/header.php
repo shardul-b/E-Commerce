@@ -29,3 +29,12 @@
             </nav>
         </div>';
 ?>
+
+<script type="text/javascript">
+    document.getElementsByClassName('search-box')[0].addEventListener("keyup",(event)=> {
+        if (event.keyCode === 13 && document.getElementsByClassName('search-box')[0].value.length>0) {
+            event.preventDefault();
+            location.href=`./search.php?value=${document.getElementsByClassName('search-box')[0].value}`;
+        }
+    }); 
+</script>

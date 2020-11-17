@@ -63,7 +63,7 @@ img{
 	/*border:1px solid red;*/
 	margin-left: auto;
 	justify-self:flex-end; 
-	background-image: url('./Assets/Icons/close.svg');
+	background-image: url('../Assets/Icons/close.svg');
 	background-repeat: no-repeat;
 	background-size: 1.5em;
 	height: 1.5em;
@@ -72,5 +72,5 @@ img{
 	cursor: pointer;
 }
 .remove-icon:hover{
-	background-image: url('./Assets/Icons/closered.svg');
+	background-image: url('../Assets/Icons/closered.svg');
 }
