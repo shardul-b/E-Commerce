@@ -62,9 +62,9 @@
 				<!-- Cost -->
 			</h3>
 			<p>Inclusive of all tax</p>
-			<input type="number" class='quantity' value="1">
+			<input type="number" class='quantity' value="0" max="2" min="1">
 			<button class="cart-button"> Add to cart </button>
-			<h3 class="product-details-head"> Product Details: <span class="asterisk"></span> </h3>
+			<h3 class="product-details-head"> Product Details:  </h3>
 			<p class="product-details">
 				<?php 
 				echo $row['Pro_desc'];

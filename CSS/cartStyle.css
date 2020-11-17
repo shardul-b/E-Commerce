@@ -1,0 +1,76 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+}
+.container{
+	width: 95%;
+	margin:0 auto;
+}
+.flex{
+	display: flex;
+	align-items: center;
+}
+h1{
+	text-align: center;
+}
+img{
+	max-width: 100%;
+}
+.back a{
+	color:#000;
+}
+/*Top*/
+.top{
+	background-color: #ddd;
+	padding:1em 0;
+}
+/*Products*/
+.products .container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 1em;
+	/*grid-row-gap: 1em;*/
+}
+/*Card*/
+.product-card{
+	width:95%;
+	padding:0.5em;
+	/*border:1px solid green;*/
+	margin: 1em 0;
+	font-size:1.2rem;
+	box-shadow: 1px 1px 5px 0.3px darkgray;
+}
+.product-image{
+	/*border:1px solid red;*/
+	max-height: 5em;
+	max-width: 5em;
+}
+/*Desc Part*/
+.name{
+	font-weight: bold;
+	font-size:0.9rem;
+	/*border:1px solid blue;*/
+	padding:0 1em;
+}
+.quantity,.cost{
+	font-size: 1.1rem;
+	padding:0 1em;
+}
+/*Cross*/
+.remove-icon{
+	/*border:1px solid red;*/
+	margin-left: auto;
+	justify-self:flex-end; 
+	background-image: url('./Assets/Icons/close.svg');
+	background-repeat: no-repeat;
+	background-size: 1.5em;
+	height: 1.5em;
+	width:1.5em;
+	background-origin: center;
+	cursor: pointer;
+}
+.remove-icon:hover{
+	background-image: url('./Assets/Icons/closered.svg');
+}
