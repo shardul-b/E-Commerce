@@ -68,8 +68,29 @@
 		</div>
 		<!-- ORDER left->select from cart, insert to order -->
 		<form method="post">
-			<button class="order-button">CONFIRM ORDER</button>
+			<button class="order-button" name='order'>CONFIRM ORDER</button>
 		</form>
+
+		<?php
+			if(isset($_POST['order'])){
+				//Date after 6 days
+				$datetime = new DateTime(date('Y-m-d'));
+				$datetime->add(new DateInterval("P6D"));
+				$format=$datetime->format('Y-m-d');
+					//echo($period.format('l'));
+				$sql = "SELECT * FROM Cart WHERE user_id = ".$_SESSION['userid']."";
+				$result=mysqli_query($connection,$sql) or die('Invalid query:');
+				while($row = mysqli_fetch_assoc($result)){
+					$sql2="SELECT Pro_cost FROM product WHERE Pro_id=".$row['product_id']."";
+			        $result2=mysqli_query($connection,$sql2) or die('Invalid query:');
+			        while($row2 = mysqli_fetch_assoc($result2)){
+			        	$cost=$row['quantity']*$row2['Pro_cost'];
+						$sql3='INSERT INTO `Order` (User_ID, Product_ID, Quantity, Total_Amount, Order_Date, Delivery_Date, Status) VALUES ('.$_SESSION["userid"].', '.$row["product_id"].', '.$row["quantity"].', '.$cost.', '.date('Y-m-d').', '.$format.',"In Progress")';
+						$result3=mysqli_query($connection,$sql3) or die('Invalid query:'.mysqli_error($connection));
+					}
+				}
+			}
+		?>
 	</div>
 </body>
 </html>
