@@ -62,8 +62,10 @@
 				<!-- Cost -->
 			</h3>
 			<p>Inclusive of all tax</p>
-			<input type="number" class='quantity' value="0" max="2" min="1">
-			<button class="cart-button"> Add to cart </button>
+			<form method="post">
+				<input type="number" class='quantity' value="0" max="2" min="1" name='quantity'>
+				<button class="cart-button" name="cartbutton"> Add to cart </button>
+			</form>
 			<h3 class="product-details-head"> Product Details:  </h3>
 			<p class="product-details">
 				<?php 
@@ -92,5 +94,17 @@
 		require './PHP/footer.php';
 	?>
 </footer>
+
+<?php
+	if(isset($_POST['cartbutton'])){
+        if(!isset($_SESSION['userid']) && !$_SESSION['loggedin']==true){
+            echo "<script> location.href='./login.php'; </script>";
+        }else{
+        	$quantity=$_POST['quantity'];
+            $SQL = "INSERT INTO Cart (user_id,product_id,quantity) VALUES ('". $_SESSION['userid'] ."','". $_GET['id'] ."','".$quantity."')";  
+            $result = mysqli_query($connection,$SQL) or die('Invalid query:'.mysqli_error($connection));
+        }
+    }
+?>
 </body>
 </html> 

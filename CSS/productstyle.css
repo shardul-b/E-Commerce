@@ -39,12 +39,8 @@ img{
 	max-width: 25em;
 	/*height:30em;*/
 }
-/*margin:20px 0;*/
-	font-size: 1.3rem;
-	/*font-weight:bold;*/
-}
 
-.single-product input{
+.quantity{
 	width: 5em;
 	height:2em;
 	padding-left: 0.5em;

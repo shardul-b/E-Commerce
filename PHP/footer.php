@@ -48,11 +48,11 @@
         </div>
         <div class="popular container flex">
             <p>Popular Seraches:
-                <a class="search-item" href="#">Dress | </a>
-                <a class="search-item" href="#">Shoes | </a>
-                <a class="search-item" href="#">Sandles | </a>
-                <a class="search-item" href="#">Jewellery | </a> 
-                <a class="search-item" href="#">Handbags</a>   
+                <a class="search-item" href="./search.php?value=Shirt">Shirt | </a>
+                <a class="search-item" href="./search.php?value=Camera">Camera | </a>
+                <a class="search-item" href="./search.php?value=Phone">Phone | </a>
+                <a class="search-item" href="./search.php?value=Perfume">Perfume </a> 
+                <!--<a class="search-item" href="#">Handbags</a>-->   
             </p>
         </div>
         <div class="social flex-space">
