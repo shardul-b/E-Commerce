@@ -36,7 +36,7 @@
 		</div>
 	</div>
 	<div class="search-results">
-		<div class="container">
+		<!-- <div class="container"> -->
 			<?php
 				$rate='';
                 $non='';
@@ -102,7 +102,7 @@
 			}
 			
 			?>
-		</div>
+		<!-- </div> -->
 	</div>
 			
 	<footer>

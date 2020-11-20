@@ -52,25 +52,43 @@ img{
 	font-weight: bold;
 	font-size:0.9rem;
 	/*border:1px solid blue;*/
-	padding:0 1em;
+	width:50%;	
+	padding:0 0.3em;
 }
 .quantity,.cost{
-	font-size: 1.1rem;
+	/*border:1px solid green;*/
+	font-size: 1rem;
 	padding:0 1em;
 }
 /*Cross*/
 .remove-icon{
 	/*border:1px solid red;*/
-	margin-left: auto;
-	justify-self:flex-end; 
+	/*margin-right: 1em;*/
+	/*justify-self:flex-end; */
 	background-image: url('../Assets/Icons/close.svg');
 	background-repeat: no-repeat;
 	background-size: 1.5em;
 	height: 1.5em;
-	width:1.5em;
+	width:2em;
 	background-origin: center;
 	cursor: pointer;
 }
 .remove-icon:hover{
 	background-image: url('../Assets/Icons/closered.svg');
+}
+/*Order Button*/
+.order-button{
+ 	background-color: #210B61;
+	color:#ECCD04;
+	width: 20%;
+	padding: 0.5em 1em;
+	margin:0 40%;
+	/*border:0;*/
+	border-radius: 5px;
+	font-weight: bold;
+}
+.order-button:hover{
+  cursor: pointer;
+  color: #210B61;
+  background-color:#ECCD04;
 }

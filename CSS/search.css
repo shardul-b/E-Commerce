@@ -57,7 +57,7 @@ select{
 }
 .product-image-container{
 	height: 12em;
-	width:12em;
+	max-width:12em;
 	/*border:1px solid red;*/
 }
 .details{
@@ -102,4 +102,29 @@ select{
 
 .stock,.offer{
 	font-size:0.8rem;
+}
+@media(max-width: 720px){
+	.container{
+		/*border:1px solid green;*/
+	}
+	.product-image-container{
+		width:30%;
+		/*border:1px solid blue;*/
+	}
+	.details{
+		/*border:1px solid red;*/
+		width:80%;
+		margin-left:1em;
+		/*margin-left: 1em;*/
+	/*line-height: 1.5em;*/
+	}
+	.sort-column{
+		/*border:1px solid red;*/
+		font-size: 0.8rem;
+		padding: 0.5em 0;
+		box-shadow: 0 1px 5px 0 gray; 
+	}
+	select{
+		margin-left:1em;
+	}
 }

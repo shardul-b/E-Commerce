@@ -74,9 +74,9 @@
 		<?php
 			if(isset($_POST['order'])){
 				//Date after 6 days
-				$datetime = new DateTime(date('Y.m.d'));
+				$datetime = new DateTime(date('Y-m-d'));
 				$datetime->add(new DateInterval("P6D"));
-				$format=$datetime->format('Y.m.d');
+				$format=$datetime->format('Ymd');
 				//echo(date('Y-m-d').' '.$format);
 				$sql = "SELECT * FROM Cart WHERE user_id = ".$_SESSION['userid']."";
 				$result=mysqli_query($connection,$sql) or die('Invalid query:');
@@ -85,9 +85,10 @@
 			        $result2=mysqli_query($connection,$sql2) or die('Invalid query:');
 			        while($row2 = mysqli_fetch_assoc($result2)){
 			        	$cost=$row['quantity']*$row2['Pro_cost'];
-			        	$date=date('Y.m.d');
+			        	$date=date('Ymd');
 						$sql3='INSERT INTO `Order` (User_ID, Product_ID, Quantity, Total_Amount, Order_Date, Delivery_Date, Status) VALUES ('.$_SESSION["userid"].', '.$row["product_id"].', '.$row["quantity"].', '.$cost.', '.$date.', '.$format.',	"In Progress")';
 						$result3=mysqli_query($connection,$sql3) or die('Invalid query:'.mysqli_error($connection));
+						//echo "<script>location";
 					}
 				}
 			}

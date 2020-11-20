@@ -1,6 +1,6 @@
 <?php
     //session_start();
-	echo'<div class="container flex-space">
+	echo'<div class="big container flex-space">
             <div class="logo-container">
                 <img src="./Assets/Images/logo.png" alt="Logo" class="logo">
             </div>
@@ -13,7 +13,7 @@
                     <li class="nav-item"><a href="./index.php" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="./shop.php" class="nav-link">Shop</a></li>
                     <li class="nav-item"><a href="./about.html" class="nav-link">About us</a></li>
-                    <li class="nav-item"><a href="./Blog/index.php" class="nav-link">BLOG</a></li>
+                   <!-- <li class="nav-item"><a href="./Blog/index.php" class="nav-link">BLOG</a></li>-->
                 </ul>
                 <a href="./cart.php">
                 <div class="cart-container flex">
@@ -27,7 +27,18 @@
                     <!-- <li class="nav-item"><a href="#" class="nav-link-button">Sign up</a></li> -->
                 </ul>
             </nav>
-        </div>';
+        </div>
+        <div class="mobile container flex-space">
+            <div class="logo-container">
+                <img src="./Assets/Images/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="search-box-container flex">
+                <span class="search-icon"></span>
+                <input type="text" class="search-box" placeholder="Search Products">
+            </div>
+            <span class="cart-icon"></span>
+        </div>
+        ';
 ?>
 
 <script type="text/javascript">

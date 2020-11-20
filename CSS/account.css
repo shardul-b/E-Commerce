@@ -19,6 +19,15 @@ body{
   border-radius: 4px;
   resize: vertical;
 }
+.flex{
+  display: flex;
+  align-items: center;
+}
+.flex-space{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .container{
   width:95%;
   margin:0 auto;
@@ -68,10 +77,81 @@ input[type=submit]:hover {
   display: table;
   clear: both;
 }
+.products .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    /*grid-row-gap: 1em;*/
+  }
+  /*Card*/
+  .product-card{
+    width:95%;
+    padding:0.5em;
+    /*border:1px solid green;*/
+    margin: 1em 0;
+    font-size:1.2rem;
+    box-shadow: 1px 1px 5px 0.3px darkgray;
+  }
+  .product-image{
+    /*border:1px solid red;*/
+    max-height: 5em;
+    max-width: 5em;
+  }
+  /*Desc Part*/
+  .name{
+    font-weight: bold;
+    font-size:0.9rem;
+    /*border:1px solid blue;*/
+    width:50%;  
+    padding:0 0.3em;
+  }
+  .quantity,.cost{
+    /*border:1px solid green;*/
+    font-size: 1rem;
+    padding:0 1em;
+  }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media (max-width: 720px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
+  }  
+  .products .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    /*grid-column-gap: 1em;*/
+    /*grid-row-gap: 1em;*/
   }
+  .product-card{
+    width:100%;
+    height:5em;
+    padding:0.5em;
+    /*border:1px solid green;*/
+    margin: 1em 0;
+    font-size:1.2rem;
+    box-shadow: 1px 1px 5px 0.3px darkgray;
+  }
+  .product-image{
+    /*border:1px solid red;*/
+    max-height: 3em;
+    max-width: 3em;
+  }
+  .name{
+    font-weight: bold;
+    font-size:0.9rem;
+    /*border:1px solid blue;*/
+    width:8em;
+    /*max-width: 10em;  */
+    padding:0 0.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .quantity,.cost{
+    /*border:1px solid green;*/
+    font-size: 0.9rem;
+    padding:0 0.1em;
+  }
+  
+}

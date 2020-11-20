@@ -98,16 +98,53 @@
             <?php
 
             ?>
-            <div class="row">
+            <div class="products">
+        <div class="container">
+            <!-- First -->
+            <?php
+                if(!isset($_SESSION['userid']) && !$_SESSION['loggedin']==true){
+                    echo "<script> location.href='./login.php'; </script>";
+                    exit;
+                }
+                $sql = "SELECT * FROM `Order` WHERE user_id = ".$_SESSION['userid']."";
+                $result=mysqli_query($connection,$sql) or die('Invalid query:');
+                while($row = mysqli_fetch_assoc($result)){
+                    //echo $row['product_id'];
+                    $sql2="SELECT * FROM product WHERE Pro_id=".$row['Product_ID']."";
+                    $result2=mysqli_query($connection,$sql2) or die('Invalid query:');
+                    $row2 = mysqli_fetch_assoc($result2);
+                    // while($row2 = mysqli_fetch_assoc($result2)){
+                        echo'
+                            <div class="product-card flex-space">
+                                <div class="product-image">
+                                    <img src="'.$row2["Pro_image"].'" alt="Camera" class="image">
+                                </div>
+                                <div class="product-desc flex">
+                                    <span class="name">
+                                        '.$row2["Pro_name"].'
+                                    </span>
+                                    <span class="quantity">x'.$row["Quantity"].'</span>
+                                    <span class="cost">&#8377;'.$row["Quantity"]*$row2["Pro_cost"].'</span>
+
+                                </div>
+                                <span class="remove-icon flex" title="Remove from cart"></span>
+                            </div>
+                            ';
+                    // }
+                }
+                
+                /**/
+            ?>
+            
+        </div>
+            <!-- <div class="row">
                 <div class="col-25">
-                    <label for="RecentOrders">Recent Orders*</label>
+
                 </div>
-                <div class="col-75">
-                    <textarea id="address" name="address" style="height:200px"></textarea>
-                </div>
-            </div>
+            </div> -->
         </div>
     </div>
+</div>
     <?php
         if(isset($_POST['edit'])){
             $FirstName=$_POST["firstname"];
