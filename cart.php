@@ -42,7 +42,8 @@
 			        //echo $row['product_id'];
 			        $sql2="SELECT * FROM product WHERE Pro_id=".$row['product_id']."";
 			        $result2=mysqli_query($connection,$sql2) or die('Invalid query:');
-			        while($row2 = mysqli_fetch_assoc($result2)){
+			        $row2 = mysqli_fetch_assoc($result2);
+			        // while($row2 = mysqli_fetch_assoc($result2)){
 			        	echo'
 							<div class="product-card flex">
 								<div class="product-image">
@@ -52,14 +53,17 @@
 									<span class="name">
 										'.$row2["Pro_name"].'
 									</span>
+									
 									<span class="quantity">x'.$row["quantity"].'</span>
 									<span class="cost">&#8377;'.$row["quantity"]*$row2["Pro_cost"].'</span>
 
 								</div>
-								<span class="remove-icon flex" title="Remove from cart"></span>
+								<a href="./cart.php?id='.$row["product_id"].'" class="clear">
+									<span class="remove-icon flex" title="Remove from cart"></span>
+								</a>
 							</div>
 							';
-			        }
+			        // }
 			    }
 				
 				/**/
@@ -83,14 +87,19 @@
 				while($row = mysqli_fetch_assoc($result)){
 					$sql2="SELECT Pro_cost FROM product WHERE Pro_id=".$row['product_id']."";
 			        $result2=mysqli_query($connection,$sql2) or die('Invalid query:');
-			        while($row2 = mysqli_fetch_assoc($result2)){
+			        $row2 = mysqli_fetch_assoc($result2);
+			        // while($row2 = mysqli_fetch_assoc($result2)){
 			        	$cost=$row['quantity']*$row2['Pro_cost'];
 			        	$date=date('Ymd');
 						$sql3='INSERT INTO `Order` (User_ID, Product_ID, Quantity, Total_Amount, Order_Date, Delivery_Date, Status) VALUES ('.$_SESSION["userid"].', '.$row["product_id"].', '.$row["quantity"].', '.$cost.', '.$date.', '.$format.',	"In Progress")';
 						$result3=mysqli_query($connection,$sql3) or die('Invalid query:'.mysqli_error($connection));
 						//echo "<script>location";
-					}
+					// }
 				}
+			}
+			if(isset($_GET['id'])){
+				$sql= "DELETE FROM  Cart WHERE user_id=". $_SESSION['userid'] ." AND product_id=".$_GET['id'];
+				$result=mysqli_query($connection,$sql) or die('Invalid query:'.mysqli_error($connection));
 			}
 		?>
 	</div>

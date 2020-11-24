@@ -1,6 +1,6 @@
 <?php
 	echo '<!-- Left Box -->
-        <div class="container footer-container">
+        <div class="container footer-container" id="footer">
             <div class="left-box">
                 <h2>About Us </h2>
                 <div class="content">

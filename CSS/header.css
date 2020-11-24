@@ -1,6 +1,7 @@
 /*Nav bar*/
 body{
   font-family: Arial;
+  scroll-behavior: smooth;
 }
 ul{
   list-style-type:none; 
