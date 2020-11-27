@@ -105,7 +105,10 @@ a{
 .mobile{
   display: none;
 }
-@media (max-width: 720px){
+.mobile-footer{
+    display: none;
+  }
+@media (max-width: 1150px){
   .logo-container{
     max-width:6em;
   /*border:1px solid green;*/
@@ -128,4 +131,44 @@ a{
   .big{
     display: none;
   }
+  .mobile-footer{
+    display: block;
+  position: fixed;
+  width:100%;
+  bottom:0;
+  /*border:1px solid red;*/
+  background-color: #210B61;
+  padding:0.2em 0;
+  /*display: none;*/
+  }
+  .footer-desc{
+    color:#FFF;
+    font-size: 0.7rem;
+    /*text-align: left; */
+  }
+  .home-icon{
+  filter: invert(100%);
+  margin-left:0.2em;
+    background:url('../Assets/Icons/home.svg');   
+}
+.shop-icon{
+  margin-left:0.2em;
+   filter: invert(100%);
+    background:url('../Assets/Icons/shop.svg');   
+}
+.about-icon{
+  margin-left:0.4em;
+   filter: invert(100%);
+    background:url('../Assets/Icons/info.svg');   
+}
+.login-icon{
+   filter: invert(100%);
+    background:url('../Assets/Icons/login.svg');   
+}
+.footer-icon{
+    background-size:1.5em;
+    background-repeat: no-repeat;
+    width: 1.5em;
+    height:1.5em; 
+}
 }

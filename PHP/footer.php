@@ -61,26 +61,7 @@
             <span class="social-icon insta-icon"></span>
             <span class="social-icon linkedin-icon"></span>
         </div>
-        <div class="mobile-footer">
-            <div class="container flex-space">
-                <div class="footer-group">
-                    <a href="./index.php" class="footer-link" title="Home"><span class="flex footer-icon home-icon"></span></a>
-                    <span class="footer-desc">HOME</span>
-                </div>
-                <div class="footer-group">
-                    <a href="./shop.php" class="footer-link" title="Shop"><span class="flex footer-icon shop-icon"></span></a>
-                    <span class="footer-desc">SHOP</span>
-                </div>
-                <div class="footer-group">
-                <a href="./about.html" class="footer-link"title="About Us"><span class="flex footer-icon about-icon"></span></a>
-                    <span class="footer-desc">ABOUT</span>
-                </div>
-                <div class="footer-group">
-                <a href="./login.php" class="footer-link" title="Login" ><span class="flex footer-icon login-icon"></span></a>
-                    <span class="footer-desc">LOGIN</span>
-                </div>
-            </div>
-        </div>
+        
         ';
 
 ?>

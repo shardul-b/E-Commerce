@@ -100,6 +100,7 @@ span{
   margin-left: 1.5em;
 }
 .tag{
+  box-shadow: 3px 5px 10px 0 gray;
   background-color:rgb(255,0,79);
   position: absolute; 
   font-size: 0.9rem;
@@ -130,7 +131,7 @@ span{
   border-radius: 5px;
   font-weight: bold;
 }
-.cart-button:hover{
+.cart-button:hover,.cart-button:active,.cart-button:focus{
   cursor: pointer;
   color: #210B61;
   background-color:#ECCD04;
@@ -158,7 +159,7 @@ span{
   background-image: url('../Assets/Icons/star.svg');
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1150px) {
   .advert{
     margin-top: 0.1em;
     /*border:1px solid green;*/
@@ -178,14 +179,14 @@ span{
     width:5%;
     /*background-color: yellow;*/
     justify-content: center;
-    top:5%;
+    top:17.5%;
   }
   .left-arrow-box{
       left:0.3em;
   }
   .right-arrow-box{
       right:0.3em;
-      top:20%;
+      top:17.48%;
   }
   .left-arrow{
       background:url('../Assets/Icons/left.svg');
@@ -202,5 +203,28 @@ span{
     cursor: pointer;
     /*border:5px solid red;*/
     filter: invert(100%);
+  }
+}
+@media (max-width: 720px){
+  .card{
+    max-width:15em;
+  }
+  .tag{ 
+    font-size: 0.8rem;
+  }
+  .product-image-container{
+    max-height:14em;
+    max-width:14.5em;
+  }
+  .name{
+    font-size: 0.8rem;
+     /*border:1px solid red;*/
+     height:7em;
+  }
+  .star-rate,.star{
+    background-size: 1.3em;
+  }
+  .cost{
+    font-size: 1rem;
   }
 }
