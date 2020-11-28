@@ -18,8 +18,7 @@
                 <a href="./cart.php">
                 <div class="cart-container flex">
                         <span class="cart-icon"></span>
-                        <span class="cart">My Cart</span>
-                    
+                        <span class="cart">My Cart</span>  
                 </div>
                 </a>
                 <ul class="nav-list nav-list-secondary flex-space">
@@ -36,7 +35,9 @@
                 <span class="search-icon"></span>
                 <input type="text" class="search-box" placeholder="Search Products">
             </div>
-            <span class="cart-icon"></span>
+            <a href="./cart.php">
+                <span class="cart-icon"></span>
+            </a>
         </div>
         <div class="mobile-footer">
             <div class="container flex-space">
@@ -52,20 +53,26 @@
                 <a href="#footer" class="footer-link"title="About Us"><span class="flex footer-icon about-icon"></span></a>
                     <span class="footer-desc">ABOUT</span>
                 </div>
+                '.((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true)?'
                 <div class="footer-group">
-                <a href="./login.php" class="footer-link" title="Login" ><span class="flex footer-icon login-icon"></span></a>
+                    <a href="./AccountInfo.php" class="footer-link" title="Account" ><span class="flex footer-icon account-icon"></span></a>
+                    <span class="footer-desc">ACCOUNT</span>
+                </div>':'
+                <div class="footer-group">
+                    <a href="./login.php" class="footer-link" title="Login" ><span class="flex footer-icon login-icon"></span></a>
                     <span class="footer-desc">LOGIN</span>
-                </div>
+                </div>').'
             </div>
         </div>
         ';
 ?>
 
 <script type="text/javascript">
-    document.getElementsByClassName('search-box')[0].addEventListener("keyup",(event)=> {
+    document.querySelector('.search-box').addEventListener("keyup",(event)=> {
         if (event.keyCode === 13 && document.getElementsByClassName('search-box')[0].value.length>0) {
             event.preventDefault();
             location.href=`./search.php?value=${document.getElementsByClassName('search-box')[0].value}`;
         }
     }); 
+
 </script>

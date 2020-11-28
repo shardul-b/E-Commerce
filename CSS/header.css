@@ -9,6 +9,13 @@ ul{
 img{
   max-width:100%;
 }
+span{
+  display: block;
+}
+.container{
+  width:95%;
+  margin: 0 auto;
+}
 .flex{
   display: flex;
   align-items: center;
@@ -164,6 +171,11 @@ a{
 .login-icon{
    filter: invert(100%);
     background:url('../Assets/Icons/login.svg');   
+}
+.account-icon{
+   margin-left: 1em;
+   filter: invert(100%);
+   background:url('../Assets/Icons/account.svg');   
 }
 .footer-icon{
     background-size:1.5em;

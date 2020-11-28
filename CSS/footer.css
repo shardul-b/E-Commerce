@@ -1,6 +1,4 @@
-footer{
-  margin-bottom: 1.5em;
-}
+
 .face-icon{
     background:url('../Assets/Icons/facebook-icon.svg');
 }
@@ -83,8 +81,13 @@ form label{
 .search-item{
   color:#000;
 }
-
+footer{
+  margin-bottom: 1.5em;
+}
 @media (min-width: 1150px){
+  footer{
+      margin-bottom: 0em;   
+  }
   /*Footer*/
   .footer-container{
     display: flex;

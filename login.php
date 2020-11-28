@@ -31,7 +31,7 @@
                     <span class="hide error login-email-error">Incorrect Email Id</span>
                    
                     <label for="log-pass" class="input-label">Password</label>
-                    <div class="password-container flex">
+                    <div class="password-container flex input-box">
                         <input type="password" name="login-password" id="log-pass" class="input-box" placeholder="Password" title='Password' required="true" oninput='signinVerify()'>
                         <div class="eye-in flex">
                             <span class="in-pass-hide hide-eye hide"></span>
@@ -67,7 +67,7 @@
                     <span class="hide error signup-email-error">Incorrect Email</span>
                     <!-- Password -->
                     <label for="new-pass" class="input-label">Password</label>
-                    <div class="password-container flex">
+                    <div class="password-container flex input-box">
                         <input type="password" name="signup-password" id="new-pass" class="input-box" placeholder="Password" title='Password' required="true" oninput='signupverify()'>
                         <div class="eye-up flex">
                             <span class="new-pass-hide hide-eye hide"></span>
@@ -77,7 +77,7 @@
                     <span class="hide error signup-password-error">Password must have 2 capital and 2 small letters, special symbols, numbers and length>7</span>
                     <!-- Verify Password -->
                     <label for="re-pass" class="input-label">Re-enter Password</label>
-                    <div class="password-container flex">
+                    <div class="password-container flex input-box">
                         <input type="password" name="signupre-password" id="re-pass" class="input-box" placeholder="Re-enter Password" title='Password' required="true" oninput='signupverify()'>
                         <div class="eye-re flex">
                             <span class="re-pass-hide hide-eye hide"></span>

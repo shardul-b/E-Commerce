@@ -61,7 +61,7 @@
             <span class="social-icon insta-icon"></span>
             <span class="social-icon linkedin-icon"></span>
         </div>
-        
+    </div>
         ';
 
 ?>

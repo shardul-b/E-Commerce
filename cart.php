@@ -25,11 +25,11 @@
 	</h1>
 	<div class="top">
 		<div class="container">
-			<span class="back"><a href="./index.php">Home</a> > <a href="./AccountInfo.php">MyAccount</a> > Cart</span>
+			<span class="back"><a href="./index.php" class="back-link">Home</a> > <a href="./AccountInfo.php" class="back-link">MyAccount</a> > Cart</span>
 		</div>
 	</div>
 	<div class="products">
-		<div class="container">
+		<div class="products-container container">
 			<!-- First -->
 			<?php
 				if(!isset($_SESSION['userid']) && !$_SESSION['loggedin']==true){
