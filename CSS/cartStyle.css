@@ -118,21 +118,25 @@ a{
   .product-image{
     /*border:1px solid red;*/
     max-height: 3em;
-    max-width: 3em;
+    width: 3.5em;
+    max-width:20%;
+  }
+  .product-desc{
+  	/*border:1px solid red;*/
+  	width:90%;
   }
   .name{
     font-weight: bold;
-    font-size:0.9rem;
+    font-size:0.8rem;
     /*border:1px solid blue;*/
     width:11em;
     /*max-width: 10em;  */
     padding:0 0.3em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
   }
   .quantity,.cost{
-    
     font-size: 0.9rem;
     padding:0 0.5em;
   }

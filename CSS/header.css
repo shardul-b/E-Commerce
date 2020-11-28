@@ -96,6 +96,8 @@ a{
   height:1em;
   width:1em;
   background-repeat: no-repeat;
+  /*border:1px solid red;*/
+  cursor:pointer;
 }
 .search-box{
   border:0;
@@ -118,18 +120,31 @@ a{
 @media (max-width: 1150px){
   .logo-container{
     max-width:6em;
+    margin:0;
+    padding:0;
   /*border:1px solid green;*/
   }
   .search-box-container{
     width:60%;
   }
+  .search-button{
+    /*position: relative;*/
+    background-color: transparent;
+    border:0;
+    border-radius: 0 5px 5px 0;
+    padding: 0.3em 0.9em;
+    /*border-left: solid  #000;*/
+    /*height:1;*/
+    box-shadow: -1px 0 5px 0 gray;
+  }
   .search-icon{
-    background-size:0.8em;
-    height:0.8em;
-    width:0.8em;
+    background-size:1em;
+    height:1em;
+    width:1em;
+    /*border:1px solid green;*/
   }
   .search-box{
-    padding:0.3em 1em;
+    padding:0.2em 1em;
   }
   .mobile{
     display: flex;

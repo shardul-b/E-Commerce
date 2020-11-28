@@ -25,12 +25,17 @@
     height:1.5em; 
 }
 .phone,.place,.email{
-  justify-content: center;
+  justify-content: flex-start;
   /*border:1px solid red;*/
 }
 .place{
-  width: 80%;
-  margin:0 auto;
+  text-align: left;
+  /*width:70%;*/
+  /*margin:0 auto;*/
+  /*border:1px solid red;*/
+}
+.text{
+  /*border:1px solid green;*/
 }
 .location-icon{
   background:url('../Assets/Icons/location.svg');
@@ -47,6 +52,7 @@
     background-repeat: no-repeat;
     width: 1.5em;
     height:1.5em; 
+    align-self: center;
 }
 footer {
     margin-top:5em;

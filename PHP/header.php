@@ -32,8 +32,8 @@
                 <img src="./Assets/Images/logo.png" alt="Logo" class="logo">
             </div>
             <div class="search-box-container flex">
-                <span class="search-icon"></span>
                 <input type="text" class="search-box" placeholder="Search Products">
+                <button class="search-button"><span class="search-icon"></span></button>
             </div>
             <a href="./cart.php">
                 <span class="cart-icon"></span>
@@ -74,5 +74,10 @@
             location.href=`./search.php?value=${document.getElementsByClassName('search-box')[0].value}`;
         }
     }); 
+    document.querySelector('.search-button').addEventListener("click",()=>{
+        //event.preventDefault();
+        // alert('Yo')
+        location.href=`./search.php?value=${document.getElementsByClassName('search-box')[1].value}`;    
+    });
 
 </script>

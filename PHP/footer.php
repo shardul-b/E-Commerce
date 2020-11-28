@@ -4,7 +4,7 @@
             <div class="left-box">
                 <h2>About Us </h2>
                 <div class="content">
-                    <p> The website where you will get all the products you wish from electronic gadgets, cameras to trending fashion dresses ,sarees, shirts and many more</p>
+                    <p> The website for getting all the products you wish from electronic gadgets, cameras to trending fashion dresses ,sarees, shirts and many more.</p>
                 </div>
                 <div class="content">
                     <div class="place flex">
@@ -33,7 +33,7 @@
                     <form action="#" class="container">
                         <!-- Email -->
                         <div class="flex">
-                            <label class="text" for="email">Email *</label>
+                            <label class="text" for="email">Email: </label>
                             <input type="email" id="email" class="input" required>
                         </div>
                         <!-- Feedback -->

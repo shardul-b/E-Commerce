@@ -70,7 +70,7 @@
 			?>
 			
 		</div>
-		<!-- ORDER left->select from cart, insert to order -->
+		<!-- ORDER -->
 		<form method="post">
 			<button class="order-button" name='order'>CONFIRM ORDER</button>
 		</form>

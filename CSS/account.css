@@ -12,7 +12,7 @@ body{
 .mid{
 	margin:20px;
 }
-.text-input, select, textarea {
+.text-input{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -38,7 +38,7 @@ label {
   display: inline-block;
 }
 
-input[type=submit] {
+/*input[type=submit] {
   margin:1em;
   background-color: #4CAF50;
   color: white;
@@ -52,7 +52,7 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-
+*/
 .container-box {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -82,6 +82,21 @@ input[type=submit]:hover {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
     /*grid-row-gap: 1em;*/
+  }
+  .button-style{
+    background-color: #210B61;
+    color:#ECCD04;
+    /*width: 20%;*/
+    padding: 0.5em 1em;
+    margin:1em 1em 1em 0;
+    /*border:0;*/
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .button-style:hover,.button-style:active,.button-style:focus{
+    cursor: pointer;
+    color: #210B61;
+    background-color:#ECCD04;
   }
   /*Card*/
   .product-card{
@@ -135,23 +150,28 @@ input[type=submit]:hover {
   .product-image{
     /*border:1px solid red;*/
     max-height: 3em;
-    max-width: 3em;
+    width: 4em;
+    max-width:20%;
+  }
+  .product-desc{
+    /*border:1px solid red;*/
+    width:90%;
   }
   .name{
     font-weight: bold;
-    font-size:0.9rem;
+    font-size:0.8rem;
     /*border:1px solid blue;*/
-    width:8em;
+    width:11em;
     /*max-width: 10em;  */
     padding:0 0.3em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
   }
   .quantity,.cost{
     /*border:1px solid green;*/
     font-size: 0.9rem;
-    padding:0 0.1em;
+    padding:0 0.5em;
   }
   
 }

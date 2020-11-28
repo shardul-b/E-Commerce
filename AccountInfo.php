@@ -69,18 +69,18 @@
                                                 <label for="address">Address:</label>
                                             </div>
                                             <div class="col-75">
-                                                <textarea id="address" name="address" style="height:200px">
-                                                    '.
-                                                        $row["Address"]
-                                                    .'
-                                                </textarea>
+                                                <input type="text" class="text-input" id="address" name="address"
+                                                    value="'.$row["Address"]
+                                                    .'"
+                                                >
+                                                    
                                             </div>
                                         </div>
                                         <div class="row">
                                             <form mehod="post">
-                                                <button name="edit">Edit</button>
+                                                <button name="edit" class="button-style">EDIT</button>
                                                 </form>
-                                                <button class="logout" name="logout">LOGOUT</button>
+                                                <button name="logout" class="logout button-style">LOGOUT</button>
                                         </div>
                                     ';
                                 }
@@ -92,7 +92,7 @@
     </div>
 
     <div class="mid">
-        <div class="container-box">
+        <!-- <div class="container-box"> -->
             <!-- Order DB -->
             <h2>Order Details</h2>
             <?php
