@@ -38,7 +38,7 @@ header{
 }
 nav{
   /*border:1px solid red;*/
-  width:45%;
+  width:40%;
   /*font-size: 0.9rem;*/
 }
 a{
@@ -58,7 +58,7 @@ a{
 }
 .cart-container{
   /*border:1px solid red;*/
-  margin-left:1em;
+  margin-left:2em;
   cursor: pointer;
 }
 .cart-icon{
@@ -109,7 +109,7 @@ a{
   /*border:1px solid green;*/
 }
 .nav-item + .nav-item{
-  margin-left: 1.5em;
+  margin-left: 2em;
 }
 .mobile{
   display: none;
@@ -125,16 +125,20 @@ a{
   /*border:1px solid green;*/
   }
   .search-box-container{
-    width:60%;
+    width:80%;  
+    padding:0;
   }
   .search-button{
-    /*position: relative;*/
+    position: relative;
     background-color: transparent;
     border:0;
     border-radius: 0 5px 5px 0;
-    padding: 0.3em 0.9em;
+    padding: 0.3em 0;
+    justify-content: center;
+    right: 0;
     /*border-left: solid  #000;*/
     /*height:1;*/
+    width:30%;
     box-shadow: -1px 0 5px 0 gray;
   }
   .search-icon{
@@ -145,10 +149,17 @@ a{
   }
   .search-box{
     padding:0.2em 1em;
+    width:80%;
+    /*border:1px solid red;*/
   }
   .mobile{
     display: flex;
     padding: 0.5em 0;
+  }
+  .logo-container{
+    width:1.5em;
+    height:1.3em;
+    /*border:1px solid green;*/
   }
   .big{
     display: none;

@@ -28,12 +28,12 @@
             </nav>
         </div>
         <div class="mobile container flex-space">
-            <div class="logo-container">
-                <img src="./Assets/Images/logo.png" alt="Logo" class="logo">
+            <div class="logo-container logo-mobile">
+                <img src="./Assets/Icons/logo_small.png" alt="Logo" class="logo">
             </div>
             <div class="search-box-container flex">
                 <input type="text" class="search-box" placeholder="Search Products">
-                <button class="search-button"><span class="search-icon"></span></button>
+                <button class="search-button flex"><span class="search-icon"></span></button>
             </div>
             <a href="./cart.php">
                 <span class="cart-icon"></span>

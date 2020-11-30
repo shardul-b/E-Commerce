@@ -25,19 +25,25 @@
     height:1.5em; 
 }
 .phone,.place,.email{
-  justify-content: flex-start;
+  margin-bottom: 0.5em;
+  /*line-height: 2em;*/
+  /*justify-content: center;*/
   /*border:1px solid red;*/
 }
 .place{
   text-align: left;
-  /*width:70%;*/
+  width:85%;  
+  /*padding:0;*/
   /*margin:0 auto;*/
+  /*flex-shrink: 1;*/
   /*border:1px solid red;*/
 }
 .text{
   /*border:1px solid green;*/
 }
 .location-icon{
+  /*border:1px solid red;*/
+  /*margin-left:2em;*/
   background:url('../Assets/Icons/location.svg');
 }
 .phone-icon{
@@ -50,9 +56,11 @@
   /*border:1px solid red;*/
     background-size:1.5em;
     background-repeat: no-repeat;
+    background-position: center;
     width: 1.5em;
     height:1.5em; 
     align-self: center;
+    margin-right:1em;
 }
 footer {
     margin-top:5em;
@@ -92,7 +100,11 @@ footer{
 }
 @media (min-width: 1150px){
   footer{
-      margin-bottom: 0em;   
+      margin-bottom: 0em; 
+      text-align:left;  
+  }
+  h2{
+    text-align: center;
   }
   /*Footer*/
   .footer-container{
