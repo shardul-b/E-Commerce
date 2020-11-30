@@ -1,6 +1,6 @@
 Ecommerce Website for Internet Programming (INTP) Mini Project
 
-Languages: HTML, CSS, JavaScript, PHP, MYSQL  
+Languages: HTML, CSS, JavaScript, PHP, SQL  
 Server: XAMPP(LOCALHOST)  
 
 Team Members:  
@@ -8,35 +8,36 @@ Rohana Survase
 Sayali Khamgaonkar  
 Shardul Birje  
 
-For Executing:  
+For Executing in XAMPP:  
 1.Clone the Repo  
 2.Copy contents to HTDOCS folder in Xampp  
-3.Start XAMPP  
-4.Head to: localhost/foldername in your browser  
+3.Start XAMPP       
+4.Open *localhost/phpMyAdmin* and create a DB named "Shop".  
+5.Click import and select the Database file stored in "Db_Files" Folder   
+6.Head to: localhost/foldername in your browser    
 
-Note:If you face username and password issues please change the username and password as per your System 
+Note: If you face username and password issues please change the username and password as per your System 
 
-Complete:
-.Homepage UI 
-.Login Page UI
-.Product desc UI
-.Product DB
-.Login/Signup Logic
-.Product desc backend
+Contents:
+.Homepage   
+.Login Page  
+.Products page  
+.Search Functionality  
+.Product description page   
+.Login/Signup  
 
-Incomplete:   
-~.Homepage work incomplete~  
-~.Databases~  
-.Product Description  
-.Images  
-~.Session implementation left~  
-~.Login/Signup Implementation left~  
-~.Account page left~  
+Incomplete:     
+.Product Description Responsiveness   
 
 
 Image credits:  
 Unsplash  
 Amazon  
-Flipkart  
+Flipkart
 
-**Credits of products to responsible brands**
+Icons from:    
+FontAwesome    
+Material.io    
+
+
+**The copyrights for Brand, Product names and  Product Images used in this project belong to respective Companies.**
