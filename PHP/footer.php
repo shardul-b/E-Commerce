@@ -9,7 +9,7 @@
                 <div class="content">
                     <div class="place flex">
                       <span class="location-icon contact-icons"></span>
-                      <span class="text">Devdarshan bldg,Sec-34,Shop No-3,Mansarovar</span>
+                      <span class="text">Shop.com Headquarters, Fort, Mumbai</span>
                     </div>
                     <div class="phone flex">
                       <span class="phone-icon contact-icons"></span>

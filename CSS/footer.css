@@ -87,6 +87,8 @@ form label{
     border-radius:5px;
 }
 .submit{
+  text-align: center;
+  /*border:1px solid red;*/
   margin-top:1em;
   width:70%;
   padding:0.3em 0.5em;
@@ -103,7 +105,7 @@ footer{
       margin-bottom: 0em; 
       text-align:left;  
   }
-  h2{
+  footer h2{
     text-align: center;
   }
   /*Footer*/
@@ -136,8 +138,10 @@ footer{
   }
   .right-box{
     width:40%;
+    /*border:1px solid red;*/
     /*border: 1px solid green;*/
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
+    text-align: center;
   }
   .submit{
     margin-top:1em;

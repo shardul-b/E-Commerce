@@ -12,7 +12,7 @@
                 <ul class="nav-list nav-list-primary flex-space">
                     <li class="nav-item"><a href="./index.php" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="./shop.php" class="nav-link">Shop</a></li>
-                    <li class="nav-item"><a href="#footer" class="nav-link">About us</a></li>
+                    <li class="nav-item"><a href="./index.php#footer" class="nav-link">About us</a></li>
                    <!-- <li class="nav-item"><a href="./Blog/index.php" class="nav-link">BLOG</a></li>-->
                 </ul>
                 <a href="./cart.php">

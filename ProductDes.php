@@ -34,7 +34,7 @@
 		}
 ?>
 <div class="small-container single-product">
-		<div class="row container">
+		<div class="row container mobile-row">
 		<!-- Image -->
 		<div class="image-container">
 			 
@@ -63,8 +63,8 @@
 			</h3>
 			<p>Inclusive of all tax</p>
 			<form method="post">
-				<input type="number" class='quantity' value="0" max="2" min="1" name='quantity'>
-				<button class="cart-button" name="cartbutton"> Add to cart </button>
+				<input type="number" class='quantity' value="1" max="2" min="1" name='quantity'>
+				<button class="button" name="cartbutton"> Add to cart </button>
 			</form>
 			<h3 class="product-details-head"> Product Details:  </h3>
 			<p class="product-details">

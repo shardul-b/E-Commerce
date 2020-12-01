@@ -58,10 +58,12 @@
                                     }
                                     echo '
                                         <div class="card">
+                                            <a href="ProductDes.php?id='.$row["Pro_id"].'">
                                             <div class="product-image-container">
                                                 '.$sale.'
                                                 <img src="'.$row["Pro_image"].'" alt="'.$row["Pro_name"].'" class="product-img">
                                             </div>
+                                            </a>
                                             <div class="details">
                                                 <div class="container">
                                                     <!-- For product details -->
@@ -113,10 +115,12 @@
                                     }
                                     echo '
                                         <div class="card">
+                                            <a href="ProductDes.php?id='.$row["Pro_id"].'">
                                             <div class="product-image-container">
                                                 '.$sale.'
                                                 <img src="'.$row["Pro_image"].'" alt="'.$row["Pro_name"].'" class="product-img">
                                             </div>
+                                            </a>
                                             <div class="details">
                                                 <div class="container">
                                                     <!-- For product details -->
@@ -170,10 +174,12 @@
                                     }
                                     echo '
                                         <div class="card">
+                                        <a href="ProductDes.php?id='.$row["Pro_id"].'">
                                             <div class="product-image-container">
                                                 '.$sale.'
                                                 <img src="'.$row["Pro_image"].'" alt="'.$row["Pro_name"].'" class="product-img">
                                             </div>
+                                            </a>
                                             <div class="details">
                                                 <div class="container">
                                                     <!-- For product details -->
