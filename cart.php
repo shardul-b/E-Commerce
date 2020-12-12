@@ -96,10 +96,12 @@
 						//echo "<script>location";
 					// }
 				}
+				echo "<script> location.href='./AccountInfo.php'; </script>";
 			}
 			if(isset($_GET['id'])){
 				$sql= "DELETE FROM  Cart WHERE user_id=". $_SESSION['userid'] ." AND product_id=".$_GET['id'];
 				$result=mysqli_query($connection,$sql) or die('Invalid query:'.mysqli_error($connection));
+				echo("<script>location.href='./cart.php';</script>");
 			}
 		?>
 	</div>
