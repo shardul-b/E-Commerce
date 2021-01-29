@@ -13,7 +13,7 @@
                     </div>
                     <div class="phone flex">
                       <span class="phone-icon contact-icons"></span>
-                      <span class="text">+91 7710811130</span>
+                      <span class="text">+91 79200811130</span>
                     </div>
                     <div class="email flex">
                       <span class="email-icon contact-icons"></span>
