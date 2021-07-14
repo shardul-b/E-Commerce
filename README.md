@@ -1,5 +1,6 @@
 # Ecommerce Website for Internet Programming (INTP) Mini Project
-***
+Check Screenshots Folder for Project Screenshots
+
 **Languages**: HTML, CSS, JavaScript, PHP, SQL  
 **Server**: XAMPP(LOCALHOST)  
 
